@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <img src="assets/img.png">
+        <form>
+            <input class="input-item" id="input-item" type="text" placeholder="Digite o item que deseja adicionar">
+            <button class="adicionar-botao" id="adicionar-botao">Salvar Item</button>
+        </form>
+        <h2>Lista de Compras</h2>
+        <hr/>
+
+        <ul>
+            <li>
+                <div class="item-lista-container">
+                    <div class="container-item-compra">
+                        <div class="checkbox-container">
+                            <label for="checkbox-1">
+                                <input type="checkbox" class="checkbox-input" id="checkbox-1">
+                                <div class="checkbox-customizado checked">
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <p>Ração - Formula Natural Filhotes</p>
+                    </div>
+                    <div class="botoes-container">
+                        <button class="botao-acao"><i class="ph ph-trash"></i></button>
+                        <button class="botao-acao"><i class="ph ph-pencil-simple"></i></button>
+                    </div>
+                </div>
+                <p class="item-lista-texto">Segunda-feira (26/08/2024)</p>
+            </li>
+        </ul>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="javascript/script.js"></script>
+</body>
+</html>

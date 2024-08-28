@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --cor-1: #BEC9B7;
+    --cor-2: #EEEEEE;
+    --cor-3: #37658E;
+}
+
+body {
+    background-color: var(--cor-1);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    gap: 2rem;
+    width: 40rem;
+    background-color: var(--cor-2);
+    border-radius: 16px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--cor-3);
+    line-height: 30px;
+    text-align: left;
+}
+
+hr {
+    border: none;
+    border-bottom: 3px dotted var(--cor-1);
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+p {
+    font-size: 1.1rem 2.2rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+img {
+    width: 18rem;
+}
+
+.input-item {
+    display: block;
+    padding: 0.8rem;
+    border-radius: 24px;
+    border: 1px solid var(--cor-1);
+    width: 25rem;
+    text-align: center;
+}
+
+.adicionar-botao {
+    text-align: center;
+    background-color: var(--cor-3);
+    color: #fff;
+    border-radius: 24px;
+    padding: 0.7rem;
+    width: 10rem;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.item-lista-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-item-compra {
+    display: flex;
+    gap: 8px;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+.item-lista-texto {
+    font-size: 0.8rem;
+}
+
+.checkbox-input {
+    display: none;
+}
+
+.checkbox-customizado {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: var(--cor-2);
+    border: 1px solid var(--cor-1);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkbox-customizado.checked {
+    background-color: var(--cor-3);
+    position: relative;
+}
+
+.checked::after {
+    content: "";
+    position: absolute;
+    left: 30%;
+    right: -10%;
+    width: 5px;
+    height: 14px;
+    border-top: 2px solid var(--cor-2);
+    border-left: 2px solid var(--cor-2);
+    transform: rotate(-140deg);
+}
+
+.botao-acao {
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
