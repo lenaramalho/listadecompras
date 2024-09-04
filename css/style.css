@@ -22,12 +22,13 @@ body {
 }
 
 main {
-    margin-top: 5rem;
+    margin: 5rem;
+    margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
-    gap: 2rem;
+    padding: 5rem;
+    gap: 3rem;
     width: 40rem;
     background-color: var(--cor-2);
     border-radius: 16px;
@@ -36,8 +37,8 @@ main {
 h2 {
     font-size: 1.8rem;
     color: var(--cor-3);
-    line-height: 30px;
-    text-align: left;
+    font-weight: 400;
+    line-height: 32px;
 }
 
 hr {
@@ -48,8 +49,9 @@ hr {
 }
 
 p {
-    font-size: 1.1rem 2.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
+    line-height: 24px;
     text-align: left;
 }
 
@@ -110,9 +112,6 @@ ul {
 .checkbox-customizado {
     width: 20px;
     height: 20px;
-    margin-right: 8px;
-    display: inline-block;
-    vertical-align: middle;
     background-color: var(--cor-2);
     border: 1px solid var(--cor-1);
     border-radius: 4px;
@@ -136,9 +135,24 @@ ul {
     transform: rotate(-140deg);
 }
 
+.ph-trash,
+.ph-pencil-simple {
+    font-size: 1.3rem;
+}
+
 .botao-acao {
     background-color: transparent;
     border: none;
     font-size: 1.1rem;
     cursor: pointer;
+}
+
+#mensagem-lista-vazia {
+    color: #888;
+    display: block;
+    text-align: center;
+}
+
+footer {
+    padding: 1rem;
 }
