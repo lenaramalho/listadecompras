@@ -15,12 +15,12 @@
         <img src="assets/img.png">
         <form>
             <input class="input-item" id="input-item" type="text" placeholder="Digite o item que deseja adicionar">
-            <button class="adicionar-botao" id="adicionar-botao">Salvar Item</button>
+            <button class="adicionar-botao" id="adicionar-botao" type="button">Salvar Item</button>
         </form>
-        <h2>Lista de Compras</h2>
+        <h2>Lista de Compras <i class="ph ph-shopping-cart"></i></h2>
         <hr/>
 
-        <ul>
+        <ul id="lista-de-compras">
             <li>
                 <div class="item-lista-container">
                     <div class="container-item-compra">
@@ -33,19 +33,40 @@
                         </div>
                         
                         <p>Ração - Formula Natural Filhotes</p>
+                        
                     </div>
                     <div class="botoes-container">
-                        <button class="botao-acao"><i class="ph ph-trash"></i></button>
+                        <button class="botao-acao"><i class="ph ph-trash" id="botao-delete"></i></button>
                         <button class="botao-acao"><i class="ph ph-pencil-simple"></i></button>
                     </div>
                 </div>
-                <p class="item-lista-texto">Segunda-feira (26/08/2024)</p>
+                <p class="item-lista-texto">Segunda-feira (26/08/2024) às 00:00</p>
             </li>
+        </ul>
+
+        <h2>Comprados</h2>
+        <hr>
+        <ul id="lista-comprados">
+            
         </ul>
     </main>
     <footer>
 
     </footer>
+    
     <script src="javascript/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const listaDeCompras = document.getElementById('lista-de-compras');
+            const itemParaRemover = Array.from(listaDeCompras.getElementsByTagName('li')).find(li => {
+                return li.textContent.includes('Ração - Formula Natural Filhotes');
+            });
+            
+            if (itemParaRemover) {
+                listaDeCompras.removeChild(itemParaRemover);
+            }
+        });
+    </script>
+    
 </body>
 </html>
