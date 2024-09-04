@@ -9,64 +9,24 @@
 </head>
 <body>
     <header>
-
     </header>
     <main>
-        <img src="assets/img.png">
-        <form>
+        <img src="assets/img.png" alt="Imagem">
+        <form id="form-item">
             <input class="input-item" id="input-item" type="text" placeholder="Digite o item que deseja adicionar">
             <button class="adicionar-botao" id="adicionar-botao" type="button">Salvar Item</button>
         </form>
         <h2>Lista de Compras <i class="ph ph-shopping-cart"></i></h2>
         <hr/>
-
         <ul id="lista-de-compras">
-            <li>
-                <div class="item-lista-container">
-                    <div class="container-item-compra">
-                        <div class="checkbox-container">
-                            <label for="checkbox-1">
-                                <input type="checkbox" class="checkbox-input" id="checkbox-1">
-                                <div class="checkbox-customizado checked">
-                                </div>
-                            </label>
-                        </div>
-                        
-                        <p>Ração - Formula Natural Filhotes</p>
-                        
-                    </div>
-                    <div class="botoes-container">
-                        <button class="botao-acao"><i class="ph ph-trash" id="botao-delete"></i></button>
-                        <button class="botao-acao"><i class="ph ph-pencil-simple"></i></button>
-                    </div>
-                </div>
-                <p class="item-lista-texto">Segunda-feira (26/08/2024) às 00:00</p>
-            </li>
+            <p id="mensagem-lista-vazia">Sua lista de compras está vazia. Adicione itens a ela para não esquecer nada na próxima compra!</p>
         </ul>
-
-        <h2>Comprados</h2>
-        <hr>
-        <ul id="lista-comprados">
-            
-        </ul>
+        <h2 id="titulo-comprados" style="display: none">Comprados</h2>
+        <hr id="hr-comprados" style="display: none">
+        <ul id="lista-comprados"></ul>
     </main>
     <footer>
-
     </footer>
-    
     <script src="javascript/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const listaDeCompras = document.getElementById('lista-de-compras');
-            const itemParaRemover = Array.from(listaDeCompras.getElementsByTagName('li')).find(li => {
-                return li.textContent.includes('Ração - Formula Natural Filhotes');
-            });
-            
-            if (itemParaRemover) {
-                listaDeCompras.removeChild(itemParaRemover);
-            }
-        });
-    </script>
-    
 </body>
 </html>
